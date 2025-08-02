@@ -22,6 +22,7 @@ spaces_on_board = [
     'Read a book in the Top 100 on Goodreads',
     'Read a book that has one word in the title',
     'Read a book recommended by a friend or faimly',
+    'Read a book that has 4 or more words in the title',
     'Read a book whose title begines with the first letter of your name',
     'Rest Stop: Read a book that is easy going or a comfort read',
     'Read a book that you were gifted by someone else',
@@ -61,10 +62,14 @@ print(f'current Space :    {current_position}')
 print(f'number of spaces left:  {left}')
 
 
-while(current_position < 37):
+print('Roll the DICE!!!  Type T or t ')
+rolling_dice = input()
+
+while(rolling_dice == 'T' or rolling_dice == 't'):
+    
     
     dice_roll = random.randint(2,12)
-    current_position = current_position + dice_roll
+    current_position = (current_position + dice_roll) % number_of_spaces
     random_space_picked = spaces_on_board[current_position]
     
     left = number_of_spaces - current_position
@@ -73,4 +78,9 @@ while(current_position < 37):
     print(f'current Space :    {current_position}')
     print(f'number of spaces left:  {left}')
     print(f'Picking :  {current_position} --> {random_space_picked}')
-    
+
+# Allow user to input book choice with author and title
+
+
+    print('Roll the DICE!!!  Type T or t ')
+    rolling_dice = input()
