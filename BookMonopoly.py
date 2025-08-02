@@ -46,27 +46,31 @@ spaces_on_board = [
 ]
 
 
-dice_roll = random.randint(2,12)
-print(f"You rolled {dice_roll}")
+dice_roll = 0
 
 random_space_picked = spaces_on_board[dice_roll]
 number_of_spaces = len(spaces_on_board)
 
+print(f'Total number of spaces : {number_of_spaces}')
+current_position = 0
+current_position = current_position + dice_roll
+left = number_of_spaces - current_position
 
-# User input & Return of & board position.
+print(f'dice Roll : {dice_roll}')
+print(f'current Space :    {current_position}')
+print(f'number of spaces left:  {left}')
 
-print(f"Moving to: {random_space_picked} ")
 
-
-# I want the program to remember what the last space it was on. Until user ends game.
-
-current_space = spaces_on_board.index(random_space_picked)
-print(current_space)
-
-while(current_space < 37):
+while(current_position < 37):
     
-    print(f'Currnet Space is {current_space}')
     dice_roll = random.randint(2,12)
-    print(f"You rolled {dice_roll}")
+    current_position = current_position + dice_roll
+    random_space_picked = spaces_on_board[current_position]
+    
+    left = number_of_spaces - current_position
 
-    current_space = current_space + dice_roll
+    print(f'dice Roll : {dice_roll}')
+    print(f'current Space :    {current_position}')
+    print(f'number of spaces left:  {left}')
+    print(f'Picking :  {current_position} --> {random_space_picked}')
+    
