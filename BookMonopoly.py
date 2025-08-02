@@ -1,9 +1,9 @@
 import random
 import json
 
-# A Simple list of genre. Program returns a random genre.
+# A Simple list of genre. Program returns a random a prompt based on a dice roll.
 
-genres = [
+spaces_on_board = [
     'Action & Adventure',
     'Crime & Mystery',
     'Fantasy',
@@ -30,14 +30,13 @@ genres = [
     'Comic'
 ]
 
+dice_roll = random.randint(1,12)
+print(f"You rolled {dice_roll}")
 
-random_genre = random.choice(genres)
+random_space_picked = spaces_on_board[dice_roll]
 
 # User input & Return of genre & board position.
 
-
-
-print("Your random genre is:")
-print(random_genre)
+print(f"Moving to: {random_space_picked} ")
 
 
