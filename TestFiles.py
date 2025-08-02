@@ -78,9 +78,21 @@ while(rolling_dice == 'T' or rolling_dice == 't'):
     print(f'Picking :  {current_position} --> {random_space_picked}')
 
 # Allow user to input book choice with author and title
-
+    print('Enter the title of the book you read: ')
+    book_title = input()
+    print('Enter the author of the book you read: ')
+    book_author = input()
 
     print('Roll the DICE!!!  Type T or t ')
     rolling_dice = input()
+
+
+
+def get_book_data():
+    return {
+        'Prompt': random_space_picked,
+        'Title': book_title,
+        'Author': book_author
+    }
 
 
