@@ -1,0 +1,118 @@
+{
+  "fiction": [
+    {
+      "name": "Action and Adventure",
+      "description": "Stories centered on a protagonist in dangerous and exciting situations."
+    },
+    {
+      "name": "Crime and Mystery",
+      "description": "Focuses on a crime and the process of solving it, often featuring a detective.",
+      "subgenres": [
+        "Cozy Mystery",
+        "Hard-boiled",
+        "Noir"
+      ]
+    },
+    {
+      "name": "Fantasy",
+      "description": "Features magical or supernatural elements, often in an imaginary world.",
+      "subgenres": [
+        "High fantasy",
+        "Urban fantasy",
+        "Dark fantasy",
+        "Epic fantasy",
+        "Magical realism",
+        "Sword and sorcery"
+      ]
+    },
+    {
+      "name": "Historical Fiction",
+      "description": "Fictional stories set in a real historical period."
+    },
+    {
+      "name": "Horror",
+      "description": "Aims to scare, startle, and evoke a feeling of dread in the reader."
+    },
+    {
+      "name": "Literary Fiction",
+      "description": "Character-driven novels that focus on themes, style, and emotional depth rather than a strong plot."
+    },
+    {
+      "name": "Romance",
+      "description": "Centers on the relationship and romantic love between two or more characters.",
+      "subgenres": [
+        "Contemporary romance",
+        "Historical romance",
+        "Paranormal romance",
+        "Romantic suspense"
+      ]
+    },
+    {
+      "name": "Science Fiction",
+      "description": "Stories with imaginary elements that are scientifically plausible, often exploring the future or technology.",
+      "subgenres": [
+        "Hard sci-fi",
+        "Soft sci-fi",
+        "Cyberpunk",
+        "Dystopian"
+      ]
+    },
+    {
+      "name": "Thriller and Suspense",
+      "description": "Fast-paced, plot-driven stories designed to create anxiety and excitement.",
+      "subgenres": [
+        "Psychological thriller",
+        "Political thriller",
+        "Legal thriller"
+      ]
+    },
+    {
+      "name": "Western",
+      "description": "Stories set in the American Old West, often featuring cowboys and a focus on rugged individualism."
+    },
+    {
+      "name": "Children's and Young Adult (YA)",
+      "description": "While often considered age-group categories, they are so popular that they function as genres with their own subgenres."
+    }
+  ],
+  "nonfiction": [
+    {
+      "name": "Biography and Memoir",
+      "description": "The life story of a person, written either by another author (biography) or by the subject themselves (memoir)."
+    },
+    {
+      "name": "History",
+      "description": "Explores real historical events, figures, and time periods."
+    },
+    {
+      "name": "Self-Help",
+      "description": "Provides guidance and advice on personal problems."
+    },
+    {
+      "name": "Science and Technology",
+      "description": "Explores various scientific and technological topics."
+    },
+    {
+      "name": "True Crime",
+      "description": "Factual accounts of real crimes and their investigation."
+    },
+    {
+      "name": "Cookbooks",
+      "description": "Collections of recipes and cooking instructions."
+    }
+  ],
+  "other_formats": [
+    {
+      "name": "Graphic Novel",
+      "description": "A novel told in a comic-strip format. Can be fiction or nonfiction."
+    },
+    {
+      "name": "Poetry",
+      "description": "Literature written in verse, often with a focus on rhythm and imagery."
+    },
+    {
+      "name": "Drama",
+      "description": "Written for performance, either on a stage or screen."
+    }
+  ]
+}
