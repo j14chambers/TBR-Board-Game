@@ -4,6 +4,7 @@ import json
 # A Simple list of genre. Program returns a random a prompt based on a dice roll.
 
 spaces_on_board = [
+    'Start Reading',
     'Read a book that has less than 250 pages',
     'Read a book that has been recommended online',
     'Read a book that has more than 400 pages',
@@ -44,13 +45,28 @@ spaces_on_board = [
     'Read a book by your favorite author'
 ]
 
-dice_roll = random.randint(1,12)
+
+dice_roll = random.randint(2,12)
 print(f"You rolled {dice_roll}")
 
 random_space_picked = spaces_on_board[dice_roll]
+number_of_spaces = len(spaces_on_board)
 
-# User input & Return of genre & board position.
+
+# User input & Return of & board position.
 
 print(f"Moving to: {random_space_picked} ")
 
 
+# I want the program to remember what the last space it was on. Until user ends game.
+
+current_space = spaces_on_board.index(random_space_picked)
+print(current_space)
+
+while(current_space < 37):
+    
+    print(f'Currnet Space is {current_space}')
+    dice_roll = random.randint(2,12)
+    print(f"You rolled {dice_roll}")
+
+    current_space = current_space + dice_roll
