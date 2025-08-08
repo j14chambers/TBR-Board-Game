@@ -63,32 +63,16 @@ print(f'number of spaces left:  {left}')
 print('Roll the DICE!!!  Type T or t ')
 rolling_dice = input()
 
-while(rolling_dice == 'T' or rolling_dice == 't'):
-    
-    
-    dice_roll = random.randint(2,12)
-    current_position = (current_position + dice_roll) % number_of_spaces
+
+
+
+def get_book_data(current_position):
     random_space_picked = spaces_on_board[current_position]
-    
-    left = number_of_spaces - current_position
-
-    print(f'dice Roll : {dice_roll}')
-    print(f'current Space :    {current_position}')
-    print(f'number of spaces left:  {left}')
     print(f'Picking :  {current_position} --> {random_space_picked}')
-
-# Allow user to input book choice with author and title
     print('Enter the title of the book you read: ')
     book_title = input()
     print('Enter the author of the book you read: ')
     book_author = input()
-
-    print('Roll the DICE!!!  Type T or t ')
-    rolling_dice = input()
-
-
-
-def get_book_data():
     return {
         'Prompt': random_space_picked,
         'Title': book_title,
@@ -96,3 +80,7 @@ def get_book_data():
     }
 
 
+def roll_dice_and_get_position(current_position, number_of_spaces):
+    dice_roll = random.randint(2,12)
+    current_position = (current_position + dice_roll) % number_of_spaces
+    return current_position
