@@ -52,51 +52,35 @@ dice_roll = 0
 random_space_picked = spaces_on_board[dice_roll]
 number_of_spaces = len(spaces_on_board)
 
-print(f'Total number of spaces : {number_of_spaces}')
+#print(f'Total number of spaces : {number_of_spaces}')
 current_position = 0
 current_position = current_position + dice_roll
 left = number_of_spaces - current_position
 
-print(f'dice Roll : {dice_roll}')
-print(f'current Space :    {current_position}')
-print(f'number of spaces left:  {left}')
+# print(f'dice Roll : {dice_roll}')
+# print(f'current Space :    {current_position}')
+# print(f'number of spaces left:  {left}')
 
+print(f'Welcome to Book Monopoly! ')
+#print('Roll the DICE!!!  Type T or t ')
+#rolling_dice = input()
 
-print('Roll the DICE!!!  Type T or t ')
-rolling_dice = input()
-
-while(rolling_dice == 'T' or rolling_dice == 't'):
-    
-    
-    dice_roll = random.randint(2,12)
-    current_position = (current_position + dice_roll) % number_of_spaces
+def get_book_data(current_position, dice_roll):
     random_space_picked = spaces_on_board[current_position]
-    
-    left = number_of_spaces - current_position
-
-    print(f'dice Roll : {dice_roll}')
-    print(f'current Space :    {current_position}')
-    print(f'number of spaces left:  {left}')
-    print(f'Picking :  {current_position} --> {random_space_picked}')
-
-
-# Allow user to input book choice with author and title
+    print(f'Rolling  {dice_roll} --> Moving to  {current_position} --> {random_space_picked}')
     print('Enter the title of the book you read: ')
     book_title = input()
     print('Enter the author of the book you read: ')
     book_author = input()
-
-    print('Roll the DICE!!!  Type T or t ')
-    rolling_dice = input()
-
-    print('Roll the DICE!!!  Type T or t ')
-    rolling_dice = input()
-
-
-# Data goes to TestFiles.py 
-def get_book_data():
     return {
+        'PromptPosition': current_position,
         'Prompt': random_space_picked,
         'Title': book_title,
         'Author': book_author
-}
+    }
+
+
+def roll_dice_and_get_position(current_position, number_of_spaces):
+    dice_roll = random.randint(2,12)
+    current_position = (current_position + dice_roll) % number_of_spaces
+    return current_position, dice_roll
