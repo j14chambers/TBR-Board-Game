@@ -14,7 +14,7 @@ spaces_on_board = [
     'Reader Choice',
     'Read a book with a red cover',
     'Read a book with a white cover',
-    'Read a book you have benn avoiding'
+    'Read a book you have benn avoiding',
     'Read a book that you bought because of the cover',
     'Listen to an audiobook',
     'Read a book that has a person on the cover',
@@ -68,9 +68,23 @@ print(f'Welcome to Book Monopoly! ')
 def get_book_data(current_position, dice_roll):
     random_space_picked = spaces_on_board[current_position]
     print(f'Rolling  {dice_roll} --> Moving to  {current_position} --> {random_space_picked}')
+
+    #if landing on these spaces, do a custom prompt
+    if current_position == 0:
+        print("You've landed on 'Start Reading'! Time to pick a new book to dive into.")
+    elif current_position == 20:    
+        print("You've reached the 'Rest Stop'! It's a perfect moment to enjoy a light and easy read.")
+    elif current_position == 7 or current_position == 22 or current_position == 36:
+        print("It's 'Reader's Choice'! You get to choose any book you want to read next.")
+
+
     print('Enter the title of the book you read: ')
     book_title = input()
     print('Enter the author of the book you read: ')
+
+    
+
+
     book_author = input()
     return {
         'PromptPosition': current_position,
@@ -84,3 +98,8 @@ def roll_dice_and_get_position(current_position, number_of_spaces):
     dice_roll = random.randint(2,12)
     current_position = (current_position + dice_roll) % number_of_spaces
     return current_position, dice_roll
+
+def roll_two_dice():
+    die1 = random.randint(1, 6)
+    die2 = random.randint(1, 6)
+    return die1, die2
